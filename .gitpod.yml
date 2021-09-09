@@ -1,0 +1,9 @@
+tasks:
+  - init: |
+      docker pull rabbitmq:3-management-alpine
+    command: docker-compose up
+  - init: |
+      npx lerna bootstrap
+    command: |
+      gp await-port 15672
+      npx lerna run start:dev
