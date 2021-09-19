@@ -2,11 +2,12 @@
 {#if !code}
 <a href={url}>Login</a>
 {:else}
-<p>{code}</p>
+<Dashboard {code}/>
 {/if}
 
 <script lang="ts">
      import { page } from '$app/stores'
+     import Dashboard from '../components/Dashboard/index.svelte';
 
     const code = $page.query.get('code')
     const clientID = import.meta.env.VITE_CLIENT_ID
