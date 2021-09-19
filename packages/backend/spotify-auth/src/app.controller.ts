@@ -12,6 +12,6 @@ export class AppController {
     const loggedInMail = await this.appService.getEmail(
       tokenResponse.access_token,
     );
-    return { ...tokenResponse, ...{ email: loggedInMail } };
+    return { ...tokenResponse, ...{ profile: loggedInMail } };
   }
 }

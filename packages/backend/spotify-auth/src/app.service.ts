@@ -24,6 +24,6 @@ export class AppService {
 
     const profile = await spotify.getMe();
 
-    return profile.body.email;
+    return profile.body;
   }
 }
