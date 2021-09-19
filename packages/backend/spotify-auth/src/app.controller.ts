@@ -6,7 +6,7 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @MessagePattern('loginWithCode')
+  @MessagePattern({ cmd: 'loginWithCode' })
   async getNotifications(@Payload() code: string) {
     const tokenResponse = await this.appService.getTokenFromCode(code);
     const loggedInMail = await this.appService.getEmail(
