@@ -13,6 +13,6 @@
     const redirectURI = import.meta.env.VITE_REDIRECT_URI
     
 
-    const url = 'https://accounts.spotify.com/authorize' +  '?response_type=code' +  '&client_id=' + clientID +  '&redirect_uri=' + encodeURIComponent(redirectURI)
+    const url = 'https://accounts.spotify.com/authorize' +  '?response_type=code' +  '&client_id=' + clientID +  '&redirect_uri=' + redirectURI
 
 </script>
