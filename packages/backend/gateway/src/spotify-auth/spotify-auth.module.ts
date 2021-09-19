@@ -18,7 +18,6 @@ import { SpotifyAuthService } from './spotify-auth.service';
         },
       },
     ]),
-    SpotifyAuthModule,
   ],
   controllers: [SpotifyAuthController],
   providers: [SpotifyAuthService],
